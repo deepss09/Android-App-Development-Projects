@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+    tools:context=".MainActivity"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textStyle="bold" android:textSize="50sp"
+        android:textColor="@color/colorPrimary"
+        android:text="Minesweeper"
+        android:layout_marginTop="25dp"
+        android:id="@+id/minesweeper"/>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="20sp"
+        android:text="Best Time: 0s"
+        android:layout_marginTop="20dp"
+        android:id="@+id/bestTime"
+        app:layout_constraintTop_toBottomOf="@+id/minesweeper"/>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="20sp"
+        android:text="Last Game Time: 0s"
+        android:layout_marginTop="10dp"
+        android:id="@+id/lastgameTime"
+        app:layout_constraintTop_toBottomOf="@+id/bestTime"/>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:textColor="@android:color/background_dark"
+        android:text="Select Difficulty"
+        android:layout_marginTop="32dp"
+        android:id="@+id/selectdifficulty"
+        app:layout_constraintTop_toBottomOf="@+id/lastgameTime"/>
+
+
+    <RadioGroup
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    app:layout_constraintStart_toStartOf="parent"
+    android:layout_marginTop="25dp"
+    android:id="@+id/difficulty"
+    app:layout_constraintTop_toBottomOf="@+id/selectdifficulty"
+    android:layout_marginStart="16dp">
+
+    <RadioButton
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:textSize="20sp"
+        android:text="Easy"
+        android:id="@+id/easy"/>
+
+    <RadioButton
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:textSize="20sp"
+        android:text="Medium"
+        android:layout_marginTop="10dp"
+        android:id="@+id/medium"
+        android:layout_marginBottom="10dp"/>
+
+    <RadioButton
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:textSize="20sp"
+        android:text="Hard"
+        android:id="@+id/hard"/>
+
+</RadioGroup>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="30sp"
+        android:textColor="@android:color/background_dark"
+        android:text="Or"
+        android:layout_marginTop="20dp"
+        android:id="@+id/or"
+        app:layout_constraintTop_toBottomOf="@+id/difficulty"/>
+
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="20sp"
+        android:text="make a custom board"
+        android:id="@+id/custom_button"
+        app:layout_constraintTop_toBottomOf="@+id/or"
+        app:layout_constraintVertical_bias="0.099"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="20sp"
+        android:text="Start"
+        android:id="@+id/start_button"
+        app:layout_constraintTop_toBottomOf="@+id/custom_button"
+        app:layout_constraintVertical_bias="0.099"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

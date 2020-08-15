@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MINESWEEPER</string>
+    <string name="LAST_GAME_SCORE">string</string>
+    <string name="HIGH_SCORE">string</string>
+</resources>

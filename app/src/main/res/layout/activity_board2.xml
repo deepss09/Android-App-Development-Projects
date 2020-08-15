@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="25sp"
+        android:text="Mines"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="36dp"
+        android:id="@+id/mines"/>
+
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Restart" android:layout_marginTop="20dp"
+        android:id="@+id/restart_button"
+        app:layout_constraintStart_toEndOf="@+id/mines"
+        app:layout_constraintEnd_toStartOf="@+id/time"/>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="25sp"
+        android:text="Time"
+        android:layout_marginTop="20dp"
+        android:id="@+id/time"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="36dp"/>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="20sp" android:text="1"
+        android:layout_marginTop="13dp"
+        android:layout_marginStart="36dp"
+        android:id="@+id/mines_left"
+        app:layout_constraintEnd_toEndOf="@+id/mines"
+        app:layout_constraintTop_toBottomOf="@+id/mines"
+        android:textColor="@android:color/background_dark"
+        android:textAlignment="center"/>
+
+    <Chronometer
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/time"
+        android:textSize="20sp" android:id="@+id/chronometer"
+        app:layout_constraintEnd_toEndOf="@+id/time"
+        android:textColor="@android:color/black"
+        app:layout_constraintBaseline_toBaselineOf="@+id/mines_left"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:paddingLeft="5dp"
+        android:layout_margin="20dp"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="143dp"
+        android:id="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="411dp"
+        app:layout_constraintGuide_begin="139dp"
+        android:orientation="horizontal"/>
+    <com.otaliastudios.zoom.ZoomLayout
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="10dp"
+        android:id="@+id/zoom_game_board"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="10dp"
+        app:zoomEnabled="true"
+        app:verticalPanEnabled="true"
+        app:overScrollVertical="true"
+        app:overScrollHorizontal="true"
+        app:overPinchable="true"
+        app:minZoomType="zoom"
+        app:minZoom="1.0"
+        app:maxZoomType="zoom"
+        app:maxZoom="4.0"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:horizontalPanEnabled="true"
+        app:hasClickableChildren="true"
+        android:scrollbars="vertical|horizontal"
+        android:layout_marginBottom="10dp">
+    <LinearLayout android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:id="@+id/game_grid"
+        android:orientation="vertical"/>
+    </com.otaliastudios.zoom.ZoomLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
